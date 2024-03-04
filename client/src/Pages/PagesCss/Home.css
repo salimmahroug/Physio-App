@@ -1,0 +1,54 @@
+.Home-Container{
+    background-color:#E4ECFF ;
+}
+.section-1{
+    background-image: url('../../Assets/img/Group\ 21.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 956px;
+    
+}
+.header{
+    display: flex;
+}
+.div-title{
+    padding-top: 191px;
+    margin-left: 91px;
+    width: 45%;
+}
+.homr-title{
+    color: #FCFCFC;
+    font-size: 85px;
+    line-height: 110px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.title-p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 41px;
+    font-size: 24px;
+    color: #E8E8E8;
+}
+.phone-section{
+        position: relative;
+        top: 75px;
+        
+        background-image: url('../../Assets/img/Phone\ Screens\ Mockup\ \(2\).png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 850px;
+        width: 760px;
+}
+.signin-butn{
+    width: 250px;
+    height: 63px;
+    border-radius: 53px;
+    border: 0;
+    background-color: #6598EC;
+    font-size: 20px;
+}
