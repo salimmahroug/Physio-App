@@ -1,133 +1,148 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-* {
-	box-sizing: border-box;
+.page-login {
+	position: fixed;
+	/* Fixe l'élément à la taille de la fenêtre */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background-color: rgb(255, 255, 255);
+	display: flex;
 }
-.H1-Login{
-	position: absolute;
-	top: 160px;
-	font-weight: bold;
+
+.login-img {
+	width: 47%;
+	height: 100%;
+	background-color: #6598EC;
+}
+
+.img-login {
+	background-image: url('../Assets/img/sports-activity-7162545-5818789\ 1.png');
+	background-size: cover;
+	height: 38vw;
+	width: 40vw;
+	margin-left: 2vw;
+	margin-top: 3vw;
+}
+
+.login-form {
+	width: 53%;
+}
+
+.form-login {
+	height: 30vw;
+	width: 22vw;
+	margin-top: 13vw;
+	margin-left: 13vw;
+}
+
+.form-login h1 {
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 120%;
+	font-size: 2vw;
+	color: #6598EC;
 	margin: 0;
 }
-.P-error{
-	font-size: 14px;
-	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
-}
-a {
-	color: #000000;
-	font-size: 14px;
-	text-decoration: none;
-	margin: 15px 0;
-}
-.boutton-login {
-	border-radius: 20px;
-	border: 1px solid #397ca0;
-	background-color: #397ca0;
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-	position: absolute;
-	bottom: 200px;
-	width: 550px;
-	height: 50px;
-	font-size: 20px;
-}
-form {
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	text-align: center;
-}
-.input-login {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 20px 0;
-	width: 85%;
-}
-.container {
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	max-width: 100%;
-	height: 800px;
-}
-.form-container {
-	position: absolute;
-	top: 0;
-	height: 100%;
-}
-.log-in-container {
-	left: 0;
-	width: 50%;
-	z-index: 2;
-}
-.overlay-container {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 50%;
-	height: 100%;
-}
-.overlay {
-	background-image: url("https://img.freepik.com/free-photo/fitness-concept-with-copy-space_23-2148531442.jpg?size=626&ext=jpg&ga=GA1.1.694565922.1706790869&semt=ais");
-	background-size: cover;
-	color: #FFFFFF;
-	position: relative;
-	left: -100%;
-	height: 100%;
-	width: 200%;
-}
-.overlay-panel {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-	height: 100%;
-	width: 50%;
-}
-.overlay-right {
-	right: 0;
-}
-.social-container {
-	margin: 50px 0;
-}
-.social-container a {
-	border: 1px solid #DDDDDD;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
-}
-@media screen and (max-width: 968px) {
-	.boutton-login {
-		width: 50%;
-	}
-	.input-login {
-		width: 120%;
 
-	}
-	.overlay-container {
-		display: none;
-	}
+.form-login p {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 120%;
+	font-size: 1.1vw;
+	margin: 0;
+	margin-top: 1.2vw;
+	margin-bottom: 3.6vw;
 }
+
+.form-login h2 {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 120%;
+	font-size: 1.1vw;
+	margin: 0;
+}
+
+.form-login input {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 120%;
+	font-size: 1.2vw;
+	margin: 0;
+	height: 3.6vw;
+	width: 26vw;
+	margin-top: 1vw;
+	margin-bottom: 1.8vw;
+	border: 2px solid #DFEAF2;
+	border-radius: 0.8vw;
+	padding-left: 1.7vw;
+	align-items: center;
+	color: #6598EC;
+
+}
+
+.boutton-login {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 120%;
+	font-size: 1.2vw;
+	margin: 0;
+	height: 3.6vw;
+	width: 12vw;
+	margin-top: 1vw;
+	margin-bottom: 1.8vw;
+	margin-left: 16vw;
+	border: 0;
+	border-radius: 0.8vw;
+	background-color: #6598EC;
+	color: white;
+}
+.form-login button:hover {
+	background-color: #3d7ce0;
+}
+
+.login-logo {
+	height: 4.5vw;
+	width: 20vw;
+	margin-left: 3.5vw;
+	position: absolute;
+	top: 3vw;
+	display: flex;
+}
+
+.login-logo h1 {
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 120%;
+	font-size: 2.2vw;
+	color: white;
+	margin-left: 1vw;
+	position: relative;
+	bottom: 0.5vw;
+}
+.language-selector {
+	position: relative;
+	display: inline-block;
+  }
+  .language-selector select {
+	padding: 5px 10px;
+	font-size: 16px;
+  }
+  .language-selector select:focus {
+	outline: none;
+  }
+  .language-selector .icon {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+  }
+  .link-home{
+	text-decoration: 0;
+	}

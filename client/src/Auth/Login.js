@@ -19,7 +19,7 @@ function Auth() {
         setLoading(true);
 
         try {
-            const response = await loginUser(username, password); 
+            const response = await loginUser(username, password);
             console.log('Login response:', response);
             const token = response.access_token;
             localStorage.setItem('token', token);
@@ -35,51 +35,53 @@ function Auth() {
         }
     };
     return (
-        <div>
-            <>
-                <link rel="stylesheet" href="style.css" />
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-                />
-                <title>Login Form Using HTML And CSS Only</title>
-                <div className="container" id="container">
-                    <div className="form-container log-in-container">
-                        <form onSubmit={handleLogin}>
-                            <h1 className='H1-Login'>Login</h1>
-                            <span>use your account</span>
-                            <input 
+        <div className='page-login'>
+            <div className='login-img'>
+                <div className='login-logo'>
+                    <Link to="/"><img src={require('../Assets/img/physioApp 3 (1).png')} alt="icône" /></Link>
+                    <Link className='link-home' to="/"><h1>PhysioApp</h1></Link>
+                </div>
+                <div className='img-login'>
+                </div>
+            </div>
+            <div className='login-form'>
+                <div class="language-selector">
+                    <select name="lang" id="lang">
+                        <option value="fr"><i class="fas fa-flag"></i> Français</option>
+                        <option value="ar"><i class="fas fa-flag"></i> العربية</option>
+                        <option value="en"><i class="fas fa-language"></i> English</option>
+                        <option value="de"><i class="fas fa-globe"></i> Deutsch</option>
+                    </select>
+                    <span class="icon"><i class="fas fa-caret-down"></i></span>
+                </div>
+                <div className='form-login'  >
+                    <form onSubmit={handleLogin}>
+                        <h1>Log In</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        <h2>Your ID</h2>
+                        <input
                             className='input-login'
                             type="text"
-                            placeholder="Email or Phone"
+                            placeholder="Your ID"
                             id="username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                         />
-                            <input
-                             className='input-login'
+                        <h2>Your password</h2>
+                        <input
+                            className='input-login'
                             type="password"
-                            placeholder="Password"
+                            placeholder="**************************"
                             id="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                            <button className='boutton-login' type="submit" disabled={loading}>
-                            {loading ? 'Logging in...' : 'Log In'}
-                        </button>
+                        <button className='boutton-login' type="submit" >Log in</button>
                         {error && <p className='P-error' style={{ color: 'red' }}>{error}</p>}
                         {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-                            <Link to="/" className='home-link'>return to home page</Link>
-                        </form>
-                    </div>
-                    <div className="overlay-container">
-                        <div className="overlay">
-                            <div className="overlay-panel overlay-right">
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-            </>
+            </div>
         </div>
     );
 }

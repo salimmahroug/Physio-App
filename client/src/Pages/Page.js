@@ -1,31 +1,36 @@
-// Page.js
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './PagesCss/Pages.css'
-
+import { useNavigate } from 'react-router-dom';
+import './PagesCss/Pages.css';
 
 function Page() {
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      window.location.href = '/login';
-    }
-  }, []);
+  const navigate = useNavigate();
+  const [selectedButton, setSelectedButton] = useState(null);
 
-  const logoutUser = () => {
-    try {
-      localStorage.setItem('token', '');
-      window.location.href = '/';
-    } catch (error) {
-      console.error('Erreur lors de la déconnexion :', error);
-    }
+  const handleButtonClick = (buttonName) => {
+    setSelectedButton(buttonName);
+    navigate("/Dashboard");
   };
 
   return (
-    <div>
-      <h1>Page</h1>
-      <button onClick={logoutUser}>Logout</button>
-      <Link to="/AddPlayer" className='link'>addplayer</Link>
+    <div className='page-login'>
+      <div className='login-img'>
+        <div className='login-logo'>
+          <Link to="/"><img src={require('../Assets/img/physioApp 3 (1).png')} alt="icône" /></Link>
+          <Link className='link-home' to="/"><h1>PhysioApp</h1></Link>
+        </div>
+        <div className='img-login'></div>
+      </div>
+      <div className='login-form'>
+        <div className='form-page'>
+          <h1>PhysioApp</h1>
+          <p>the inclusion of technical staff and supervisors adds depth to the user experience by providing support and guidance to the user's management decisions</p>
+          <div className='btns-category'>
+            <button className={selectedButton === 'Suppervisor' ? 'btn-supervisor selected' : 'btn-supervisor'} onClick={() => handleButtonClick('Suppervisor')}>Suppervisor</button>
+            <button className={selectedButton === 'Technical staff' ? 'btn-tech selected' : 'btn-tech'} onClick={() => handleButtonClick('Technical staff')}>Technical staff</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -33,7 +33,6 @@ const importUserData = async () => {
         return null;
     }
 };
-
 const addPlayer = async (formData) => {
     try {
         const token = localStorage.getItem('token');
@@ -56,7 +55,6 @@ const addPlayer = async (formData) => {
         throw error;
     }
 };
-
 const deletePlayer = async (playerId) => {
     try {
         const token = localStorage.getItem('token');

@@ -1,74 +1,157 @@
-/* Style pour le conteneur principal */
-.add-player-container {
-    max-width: 1200px; /* Largeur maximale */
-    margin: 20px auto; /* Centré horizontalement */
-    padding: 40px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+.add-player-container{
+    margin-left: 4vw;
+    margin-top: 3vw;
+}
+.add-player-container form{
+    border: 0;
+    margin-bottom: 1.5vw;
+}
+.inputs-addplayer{
+    display: flex;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    width: 65vw;
+    background-color: white;
+    border: 0.15vw solid  #E3E3E3;
+    border-radius: 1.5vw;
+}
+.inputs-addplayer input{
+    border: 0.15vw solid #DFEAF2;
+    border-radius: 0.8vw;
+    height: 2.8vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-bottom: 1.2vw;
+}
+.inputs-addplayer input::placeholder{
+   color: #718EBF;
+   font-size: 1vw;
+}
+.inputs-addplayer h2{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    margin-bottom: 0.4vw;
+    margin-top: 0;
+}
+.inputs-type1{
+    width: 11.6vw;
+    margin-right: 0.6vw;
+    
+}
+.inputs-type2{
+    width: 25.8vw;
+}
+.select-inp option{
+    font-size: 1vw;
+    color: #6598EC;
+}
+.inputs-addplayer select{
+    color: #718EBF;
+    width: 27.8vw;
+    border: 0.15vw solid #DFEAF2;
+    border-radius: 0.8vw;
+    height: 3vw;
+    padding-left: 1vw;
+    padding-right: 2vw;
+    margin-bottom: 1.2vw;
+    position: relative;
+    display: inline-block;
+    font-size: 1Vw;
 }
 
-/* Style pour les titres */
-.add-player-container h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.inputs-section1{
+    padding-left: 2vw;
+    width: 33vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.inputs-section2{
+    padding-right:1vw ;
+   
+}
+.btn-saveplayer{
+    height: 3vw;
+    width: 11.5vw;
+    color: white;
+    background-color: #6598EC;
+    border: 0;
+    border-radius: 1vw;
+    position: absolute;
+    right: 5.5vw;
+    bottom: 1.5vw;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+}
+.btn-saveplayer:hover{
+    background-color: #5087de;
 }
 
-/* Style pour les champs de saisie */
-.add-player-container input[type="text"],
-.add-player-container input[type="email"],
-.add-player-container input[type="date"],
-.add-player-container input[type="tel"],
-.add-player-container input[type="file"] {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box; /* Inclure le padding et le border dans la largeur */
-    font-size: 16px; /* Taille de la police */
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto;
 }
 
-/* Style pour le bouton d'ajout de joueur */
-.add-player-container button[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
+.avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+}
+
+.avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.avatar-upload .avatar-edit label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 18px; /* Taille de la police */
+    font-weight: normal;
+    transition: all .2s ease-in-out;
 }
 
-.add-player-container button[type="submit"]:hover {
-    background-color: #0056b3;
+.avatar-upload .avatar-edit label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
 }
 
-/* Style pour les messages d'erreur */
-.add-player-container .error-message {
-    color: #dc3545;
-    margin-top: 10px;
+.avatar-upload .avatar-edit label:after {
+    content: "\f040";
+    font-family: 'FontAwesome';
+    color: #757575;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
 }
 
-/* Media queries pour les écrans de petite taille */
-@media screen and (max-width: 768px) {
-    .add-player-container {
-        max-width: 100%; /* Ajustement de la largeur */
-        margin: 0 auto; /* Centré horizontalement */
-        padding: 20px; /* Ajustement de la marge intérieure */
-    }
+.avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
 
-    .add-player-container input[type="text"],
-    .add-player-container input[type="email"],
-    .add-player-container input[type="date"],
-    .add-player-container input[type="tel"],
-    .add-player-container input[type="file"] {
-        font-size: 14px; /* Taille de police réduite */
-    }
-
-    .add-player-container button[type="submit"] {
-        font-size: 16px; /* Taille de police réduite */
-    }
+.avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
